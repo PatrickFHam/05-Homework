@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,11 +28,143 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+    <div id="misc-button-bar" class="container-fluid col text-center">
+      <button id="clrAll" class="btn btn-danger">CLEAR ALL Activities</button>
+      <button id="setAll" class="btn btn-success">SAVE ALL Activities</button>
+    </div>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div id="9a-row" class="row border-bottom">
+        <div id="9a-time" class="col-2 time-block">9am</div>
+        <textarea id="9a-desc" class="col-9 description"></textarea>
+        <button id="9a-clear" name="col-1 clear 9a" class="clrBtn"></button>
+        <button id="9a-save" name="col-1 save 9a" class="saveBtn"></button>
+      </div>
+      <div id="10a-row" class="row border-bottom">
+        <div id="10a-time" class="col-2 time-block">10am</div>
+        <textarea id="10a-desc" class="col-9 description"></textarea>
+        <button id="10a-clear" name="col-1 clear 10a" class="clrBtn"></button>
+        <button id="10a-save" name="col-1 save 10a" class="saveBtn"></button>
+      </div>
+      <div id="11a-row" class="row border-bottom">
+        <div id="11a-time" class="col-2 time-block">11am</div>
+        <textarea id="11a-desc" class="col-9 description"></textarea>
+        <button id="11a-clear" name="col-1 clear 11a" class="clrBtn"></button>
+        <button id="11a-save" name="col-1 save 11a" class="saveBtn"></button>
+      </div>
+      <div id="12n-row" class="row border-bottom">
+        <div id="12n-time" class="col-2 time-block">12n</div>
+        <textarea id="12n-desc" class="col-9 description"></textarea>
+        <button id="12n-clear" name="col-1 clear 12n" class="clrBtn"></button>
+        <button id="12n-save" name="col-1 save 12n" class="saveBtn"></button>
+      </div>
+      <div id="1p-row" class="row border-bottom">
+        <div id="1p-time" class="col-2 time-block">1p</div>
+        <textarea id="1p-desc" class="col-9 description"></textarea>
+        <button id="1p-clear" name="col-1 clear 1p" class="clrBtn"></button>
+        <button id="1p-save" name="col-1 save 1p" class="saveBtn"></button>
+      </div>
+      <div id="2p-row" class="row border-bottom">
+        <div id="2p-time" class="col-2 time-block">2p</div>
+        <textarea id="2p-desc" class="col-9 description"></textarea>
+        <button id="2p-clear" name="col-1 clear 2p" class="clrBtn"></button>
+        <button id="2p-save" name="col-1 save 2p" class="saveBtn"></button>
+      </div>
+      <div id="3p-row" class="row border-bottom">
+        <div id="3p-time" class="col-2 time-block">3p</div>
+        <textarea id="3p-desc" class="col-9 description"></textarea>
+        <button id="3p-clear" name="col-1 clear 3p" class="clrBtn"></button>
+        <button id="3p-save" name="col-1 save 3p" class="saveBtn"></button>
+      </div>
+      <div id="4p-row" class="row border-bottom">
+        <div id="4p-time" class="col-2 time-block">4p</div>
+        <textarea id="4p-desc" class="col-9 description"></textarea>
+        <button id="4p-clear" name="col-1 clear 4p" class="clrBtn"></button>
+        <button id="4p-save" name="col-1 save 4p" class="saveBtn"></button>
+      </div>
+      <div id="5p-row" class="row">
+        <div id="5p-time" class="col-2 time-block">5p</div>
+        <textarea id="5p-desc" class="col-9 description"></textarea>
+        <button id="5p-clear" name="col-1 clear 5p" class="clrBtn"></button>
+        <button id="5p-save" name="col-1 save 5p" class="saveBtn"></button>
+      </div>
+      
+
+
+
+
+      <!-- MODAL for Clear Hour -->
+      <div id="confirmClrHour" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Clear Hour?></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you SURE you want to clear this hour's activities?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No, nevermind.</button>
+              <button type="button" class="btn btn-primary">Yes, I'm sure.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- MODAL for Clear All -->
+      <div id="confirmClrAll" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Clear All?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you SURE you want to clear this entire day's activities?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No, nevermind.</button>
+              <button type="button" class="btn btn-primary">Yes, I'm sure.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="confirmSetAll" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Set All Hours?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you SURE you want to OVER-WRITE this entire day's activities?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">No, nevermind.</button>
+              <button type="button" class="btn btn-primary">Yes, I'm sure.</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
