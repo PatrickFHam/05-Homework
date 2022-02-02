@@ -34,6 +34,22 @@ const setAllEl = document.getElementById("setAll");
 const ModalClrHourEl = document.getElementById("confirmClrHour");
 const ModalClrAllEl = document.getElementById("confirmClrAll");
 
+var datetime = null,
+        date = null,
+ currentHour = null;
+
+var update = function () {
+    date = moment(new Date())
+    datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+};
+
+$(document).ready(function(){
+    datetime = $('#currentDay')
+    update();
+    setInterval(update, 1000);
+});
+
+var currentHour = moment().format("HH");
 
 save9aEl.onclick = function()  {localStorage.setItem("9a", activity9aEl.value);};
 save10aEl.onclick = function() {localStorage.setItem("10a", activity10aEl.value);};
