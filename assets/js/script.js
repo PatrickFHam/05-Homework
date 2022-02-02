@@ -139,15 +139,15 @@ function timeConditionalFormatting () {
 
 // Stores the value of each time-block upon clicking "Save."
 
-save9aEl.onclick = function()  {localStorage.setItem("9a", activity9aEl.value);};
-save10aEl.onclick = function() {localStorage.setItem("10a", activity10aEl.value);};
-save11aEl.onclick = function() {localStorage.setItem("11a", activity11aEl.value);};
-save12nEl.onclick = function() {localStorage.setItem("12n", activity12nEl.value);};
-save1pEl.onclick = function()  {localStorage.setItem("1p", activity1pEl.value);};
-save2pEl.onclick = function()  {localStorage.setItem("2p", activity2pEl.value);};
-save3pEl.onclick = function()  {localStorage.setItem("3p", activity3pEl.value);};
-save4pEl.onclick = function()  {localStorage.setItem("4p", activity4pEl.value);};
-save5pEl.onclick = function()  {localStorage.setItem("5p", activity5pEl.value);};
+save9aEl.onclick = function()  {localStorage.setItem("9a", activity9aEl.value); reloadPage()};
+save10aEl.onclick = function() {localStorage.setItem("10a", activity10aEl.value); reloadPage()};
+save11aEl.onclick = function() {localStorage.setItem("11a", activity11aEl.value); reloadPage()};
+save12nEl.onclick = function() {localStorage.setItem("12n", activity12nEl.value); reloadPage()};
+save1pEl.onclick = function()  {localStorage.setItem("1p", activity1pEl.value); reloadPage()};
+save2pEl.onclick = function()  {localStorage.setItem("2p", activity2pEl.value); reloadPage()};
+save3pEl.onclick = function()  {localStorage.setItem("3p", activity3pEl.value); reloadPage()};
+save4pEl.onclick = function()  {localStorage.setItem("4p", activity4pEl.value); reloadPage()};
+save5pEl.onclick = function()  {localStorage.setItem("5p", activity5pEl.value); reloadPage()};
 
 
 // Clears the value of each time-block upon clicking "Delete."
@@ -157,7 +157,7 @@ clearAllEl.onclick = function() {
   $("#confirmClrAll").find(".btn-primary").click(function(){
     clearAll();
     $("#confirmClrAll").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -166,7 +166,7 @@ setAllEl.onclick = function() {
   $("#confirmSetAll").find(".btn-primary").click(function(){
     setAll();
     $("#confirmSetAll").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 }
 
@@ -177,7 +177,7 @@ clear9aEl.onclick = function() {
     localStorage.setItem("9a", ' ');
     activity9aEl.textContent = localStorage.getItem("9a");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -187,7 +187,7 @@ clear10aEl.onclick = function() {
     localStorage.setItem("10a", ' ');
     activity9aEl.textContent = localStorage.getItem("10a");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -197,7 +197,7 @@ clear11aEl.onclick = function() {
     localStorage.setItem("11a", ' ');
     activity9aEl.textContent = localStorage.getItem("11a");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -207,7 +207,7 @@ clear12nEl.onclick = function() {
     localStorage.setItem("12n", ' ');
     activity9aEl.textContent = localStorage.getItem("12n");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -217,7 +217,7 @@ clear1pEl.onclick = function() {
     localStorage.setItem("1p", ' ');
     activity9aEl.textContent = localStorage.getItem("1p");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -227,7 +227,7 @@ clear2pEl.onclick = function() {
     localStorage.setItem("2p", ' ');
     activity9aEl.textContent = localStorage.getItem("2p");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -237,7 +237,7 @@ clear3pEl.onclick = function() {
     localStorage.setItem("3p", ' ');
     activity9aEl.textContent = localStorage.getItem("3p");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -247,7 +247,7 @@ clear4pEl.onclick = function() {
     localStorage.setItem("4p", ' ');
     activity9aEl.textContent = localStorage.getItem("4p");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -257,7 +257,7 @@ clear5pEl.onclick = function() {
     localStorage.setItem("5p", ' ');
     activity9aEl.textContent = localStorage.getItem("5p");
     $("#confirmClrHour").modal("hide");
-    recallAllSavedActivities();
+    reloadPage();
   })
 };
 
@@ -304,6 +304,12 @@ function recallAllSavedActivities () {
   activity5pEl.textContent = localStorage.getItem("5p");
 }
 
+// Quick way to call a page reload.
+
+function reloadPage () {
+  window.location.reload();
+  return;
+}
 
 // Running functions upon page-load.
 
