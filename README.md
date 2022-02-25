@@ -1,5 +1,5 @@
 # Workday Scheduler
-Link to the Working Page: https://patrickfham.github.io/WorkdayScheduler/
+Link to the Scheduler: https://patrickfham.github.io/WorkdayScheduler/
 
 
 ## Approach
