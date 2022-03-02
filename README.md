@@ -16,4 +16,6 @@ Link to the Scheduler: https://patrickfham.github.io/WorkdayScheduler/
 - Save and Clear Buttons (single and ALL) ... https://watch.screencastify.com/v/Jo4ZIyvNe0EqdNXCAqrE 
 
 ## Screenshots
-![WorkingSavedActivitiesIntoLocalStorage](./assets/screenshots/times_activities_in_LS.jpg) 
+![LandingPage](./assets/screenshots/schedulerlanding.jpg) 
+![SaveAll](./assets/screenshots/schedulersaveall.jpg) 
+![ClearHour](./assets/screenshots/schedulerdeletehour.jpg) 
