@@ -15,6 +15,5 @@ Link to the Scheduler: https://patrickfham.github.io/WorkdayScheduler/
 - Time-of-Day Conditional Formatting ... https://watch.screencastify.com/v/gfjZUhgCZGnRGU66BSx1 
 - Save and Clear Buttons (single and ALL) ... https://watch.screencastify.com/v/Jo4ZIyvNe0EqdNXCAqrE 
 
-
 ## Screenshots
-![WorkingSavedActivitiesIntoLocalStorage](/assets/images/screenshots/times_activities_in_LS.jpg) 
+![WorkingSavedActivitiesIntoLocalStorage](./assets/screenshots/times_activities_in_LS.jpg) 
