@@ -17,4 +17,4 @@ Save and Clear Buttons (single and ALL) ... https://watch.screencastify.com/v/Jo
 
 
 ## Screenshots
-![WorkingSavedActivitiesIntoLocalStorage](./assets/images/screenshots/times_activities_in_LS.jpg)
+![WorkingSavedActivitiesIntoLocalStorage](/assets/images/screenshots/times_activities_in_LS.jpg)
